@@ -11,6 +11,12 @@
             {{ current.artist }}
             </span>
           </h2>
+          <div class="control">
+            <button class="prev">Prev</button>
+            <button class="play" v-if="!isPlaying">Play</button>
+            <button class="pause" v-else >Pause</button>
+            <button class="next">Next</button>
+          </div>
       </section>
     </main>
   </div>
@@ -38,11 +44,23 @@ export default {
       player: new Audio()
     }
   },
+  methods: {
+    play (song) {
+      if (typeof song.src != "undefined") {
+        this.current = song;
+        this.player.src = this.current.src;
+      }
+  
+      this.player.play();
+      this.isPlaying = true;
+      }
+    },
+
   created () {
     this.current = this.songs[this.index];
     this.player.src = this.current.src;
   }
-};
+}
 </script>
 
 <style>
