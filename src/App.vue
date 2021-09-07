@@ -1,26 +1,65 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <header>
+      <h1>My Music</h1>
+    </header>
+    <main>
+      <section class="player">
+        <h2 class="song-title">
+          {{ current.title }} -
+          <span>
+            {{ current.artist }}
+            </span>
+          </h2>
+      </section>
+    </main>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  name: "app",
+  data () {
+    return {
+      current: {},
+      index: 0,
+      songs: [
+        {
+          title: 'Tokyo Revenger OST',
+          artist: '...',
+          src: require('./assets/tokyo-revengers-epic-ost.mp3')
+        },
+        {
+        title: 'Above - Haikyuu',
+        artist: 'Yuki Hayashi',
+        src: require('./assets/above-haikyuu-season-2-ost-vol-1-yuki-hayashi.mp3')
+        }
+      ],
+      player: new Audio()
+    }
+  },
+  created () {
+    this.current = this.songs[this.index];
+    this.player.src = this.current.src;
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: black;
+  color: white;
 }
 </style>
