@@ -10,12 +10,12 @@ export default {
             songs: [{
                     title: "Tokyo Revenger OST",
                     artist: "Japan artist",
-                    src: require("../assets/musics/tokyo-revengers-epic-ost.mp3"),
+                    src: require("./musics/tokyo-revengers-epic-ost.mp3"),
                 },
                 {
                     title: "Above",
                     artist: "Yuki Hayashi",
-                    src: require("../assets/musics/above-haikyuu-season-2-ost-vol-1-yuki-hayashi.mp3"),
+                    src: require("./musics/above-haikyuu-season-2-ost-vol-1-yuki-hayashi.mp3"),
                 },
             ],
             player: new Audio(),
@@ -81,17 +81,17 @@ export default {
             {{ current.title }} ~ <span> {{ current.artist }} </span>
         </h2>
         <div class="controls">
-            <base-btn class="prev" @click="prev">Prev</base-btn>
-            <base-btn class="play" v-if="!isPlaying" @click="play">Play</base-btn>
-            <base-btn class="pause" v-else @click="pause">Pause</base-btn>
-            <base-btn class="next" @click="next">Next</base-btn>
+            <base-btn class="prev fas fa-backward" @click="prev" />
+            <base-btn class="play fas fa-play" v-if="!isPlaying" @click="play"/>
+            <base-btn class="pause fas fa-pause" v-else @click="pause"/>
+            <base-btn class="next fas fa-forward" @click="next" />
         </div>
     </section>
 </template>
 
 <style>
     .song-title {
-        color: rgb(65, 59, 59);
+        color: white;
         font-size: 32px;
         font-weight: 700;
         text-transform: uppercase;
@@ -110,6 +110,13 @@ export default {
         padding: 2rem 1rem;
     }
 
+    .play, .pause, .next, .prev {
+        font-weight: 700;
+        padding: 0.5rem 1rem;
+        margin: 0 1rem;
+        color: white;
+    }
+
     .play, .pause {
         font-size: 20px;
         border-radius: 8px;
@@ -121,4 +128,16 @@ export default {
         border-radius: 6px;
         background-color: #FF5858;
     }
+
+    .play, .pause, .next, .prev {
+        backface-visibility: hidden;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        white-space: nowrap;
+        border-color: #7c7c7c;
+        background: linear-gradient(180deg,#e6e6e6 0%,rgba(0, 0, 0, 0.25) 49%, rgba(38, 38, 38, 0.6) 51%,rgba(0, 0, 0, 0.25) 100%);
+        border-radius: 5px;
+    }
+
 </style>

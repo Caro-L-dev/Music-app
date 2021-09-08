@@ -6,12 +6,12 @@ export default {
         songs: [{
                 title: "Tokyo Revenger OST",
                 artist: "Japan artist",
-                src: require("../assets/musics/tokyo-revengers-epic-ost.mp3"),
+                src: require("./musics/tokyo-revengers-epic-ost.mp3"),
             },
             {
                 title: "Above - Haikyuu",
                 artist: "Yuki Hayashi",
-                src: require("../assets/musics/above-haikyuu-season-2-ost-vol-1-yuki-hayashi.mp3"),
+                src: require("./musics/above-haikyuu-season-2-ost-vol-1-yuki-hayashi.mp3"),
             },
         ],
         player: new Audio(),
@@ -38,10 +38,10 @@ export default {
 <style>
     .playlist {
         padding: 0 1rem;
+        color: #ffffff;
     }
     
     .playlist h3 {
-        color: #212121;
         font-size: 28px;
         font-weight: 400px;
         margin-bottom: 30px;
