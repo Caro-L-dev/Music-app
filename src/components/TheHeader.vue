@@ -1,6 +1,6 @@
 <template>
     <header>
-        <h1>My Music</h1>
+        <h1>Music</h1>
     </header>
 </template>
 

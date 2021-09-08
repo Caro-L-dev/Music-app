@@ -23,15 +23,15 @@ export default {
 
 <template>
     <section class="playlist">
-        <h3>The Playlist</h3>
-        <base-button 
+        <h3>Playlist</h3>
+        <base-btn 
             v-for="song in songs" 
             :key="song.src" 
             @click="play(song)" 
             :class="song.src == current.src ? 'song playing' : 'song'"
             >
             {{ song.title }} ~ {{ song.artist }}
-        </base-button>
+        </base-btn>
     </section>
 </template>
 
@@ -66,6 +66,4 @@ export default {
         color: white;
         background-image: linear-gradient(to right, #cc2e5d, #FF5858);
     }
-
-
 </style>

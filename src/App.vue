@@ -2,35 +2,32 @@
 import TheHeader from './components/TheHeader.vue';
 import ThePlayer from './components/ThePlayer.vue';
 import ThePlaylist from './components/ThePlaylist.vue';
+import BasebuttonDocs from './docs/BasebuttonDocs';
 
 export default {
     components: {
         TheHeader,
         ThePlayer,
-        ThePlaylist
+        ThePlaylist,
+        BasebuttonDocs
     }
 };
 </script>
 
 <template>
-    <div>
+    <div class="wrapper">
         <the-header />
         <main>
             <the-player />
             <the-playlist />
         </main>
+        <basebutton-docs />
     </div>
 </template>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: sans-serif;
+.wrapper {
+    background-color: rgb(192, 192, 192);
 }
 
 main {

@@ -1,9 +1,9 @@
 <script>
-import BaseButton from './BaseButton.vue';
+import BaseBtn from './BaseBtn.vue';
 export default {
     data () {
         return {
-        BaseButton,           
+        BaseBtn,           
             current: {},
             index: 0,
             isPlaying: false,
@@ -13,7 +13,7 @@ export default {
                     src: require("../assets/musics/tokyo-revengers-epic-ost.mp3"),
                 },
                 {
-                    title: "Above - Haikyuu",
+                    title: "Above",
                     artist: "Yuki Hayashi",
                     src: require("../assets/musics/above-haikyuu-season-2-ost-vol-1-yuki-hayashi.mp3"),
                 },
@@ -81,10 +81,10 @@ export default {
             {{ current.title }} ~ <span> {{ current.artist }} </span>
         </h2>
         <div class="controls">
-            <base-button class="prev" @click="prev">Prev</base-button>
-            <base-button class="play" v-if="!isPlaying" @click="play">Play</base-button>
-            <base-button class="pause" v-else @click="pause">Pause</base-button>
-            <base-button class="next" @click="next">Next</base-button>
+            <base-btn class="prev" @click="prev">Prev</base-btn>
+            <base-btn class="play" v-if="!isPlaying" @click="play">Play</base-btn>
+            <base-btn class="pause" v-else @click="pause">Pause</base-btn>
+            <base-btn class="next" @click="next">Next</base-btn>
         </div>
     </section>
 </template>
@@ -112,21 +112,13 @@ export default {
 
     .play, .pause {
         font-size: 20px;
-        font-weight: 700;
-        padding: 1rem 2rem;
-        margin: 0 1rem;
         border-radius: 8px;
-        color: white;
         background-color: #CC2E5D;
     }
 
     .next, .prev {
         font-size: 16px;
-        font-weight: 700;
-        padding: 1rem 2rem;
-        margin: 0 1rem;
         border-radius: 6px;
-        color: white;
         background-color: #FF5858;
     }
 </style>

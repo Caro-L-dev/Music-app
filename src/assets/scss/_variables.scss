@@ -1,0 +1,41 @@
+@use 'vars';
+
+/* Base colors */
+$color-main: #CC2E5D;
+$color-secondary: #FF5858;
+$color-default-text:rgb(7, 7, 7);
+
+/* Linear Gradient */
+$color-playlist: linear-gradient(to right, $color-main, $color-secondary);
+
+/* Font-size */
+$base-font-size: 14px;
+
+/* Font-family */
+$font-family-primary: "Roboto", sans-serif;
+$font-family-secondary: "Montserrat", sans-serif;
+
+/* Buttons */
+$button-color-text: #fff;
+$button-color-bg: $color-main;
+$button-font-size: px2em(15px);
+$button-radius: px2em(5px, 15px);
+$button-height: px2em(37px, 15px);
+
+$button-variations: (
+    'main': (
+        'color': #fff,
+        'bgColor': $color-main,
+        'bgHover': lighten($color-main, 10)
+    ),
+    'secondary': (
+        'color': #fff,
+        'bgColor': $color-secondary,
+        'bgHover': lighten($color-secondary, 10)
+    ),
+    'playlist': (
+        'color': #fff,
+        'bgColor': $color-playlist,
+        'bgHover': lighten($color-secondary, 10)
+    )
+) !default;
