@@ -23,47 +23,55 @@ export default {
 
 <template>
     <section class="playlist">
-        <h3>Playlist</h3>
+        <p>Choose your song:</p>
         <base-btn 
             v-for="song in songs" 
             :key="song.src" 
             @click="play(song)" 
-            :class="song.src == current.src ? 'song playing' : 'song'"
+            :class="song.src == current.src ? 'playlist__song-playing' : 'playlist__song'"
             >
             {{ song.title }} ~ {{ song.artist }}
         </base-btn>
+        <span class="fas fa-angle-down" />
     </section>
 </template>
 
 <style>
     .playlist {
-        padding: 0 1rem;
-        color: #ffffff;
-    }
-    
-    .playlist h3 {
-        font-size: 28px;
-        font-weight: 400px;
-        margin-bottom: 30px;
+        overflow: hidden;
         text-align: center;
-    }
-
-    .playlist .song {
-        display: block;
-        width: 100%;
-        padding: 1rem;
-        font-size: 20px;
+        background-color: rgb(51, 51, 51);
+        border-radius: 1rem;
+        border: inset 5px #FEA606;
+        color: white;
         font-weight: 700;
         cursor: pointer;
     }
-
-    .playlist .song:hover {
-        color: #FF5858;
+    
+    .playlist__title {
+        font-size: 24px;
+        margin-bottom: 1rem;
     }
 
+    .playlist__song {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 14px;
 
-    .playlist .song.playing {
+    }
+
+    .playlist__song:hover {
+        background-color: rgb(0, 0, 0);
+        color: #f98315;
+    }
+
+    .playlist__song-playing {
         color: white;
         background-image: linear-gradient(to right, #cc2e5d, #FF5858);
+    }
+
+    .fa-angle-down {
+        padding: 1rem;
     }
 </style>
