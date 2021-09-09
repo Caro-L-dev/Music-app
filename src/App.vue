@@ -1,21 +1,26 @@
 <script>
-import GlobalPlaylist from './components/playlist/GlobalPlaylist';
+// import GlobalPlaylist from './components/playlist/GlobalPlaylist';
+import GlobalTabVue from './components/tab/GlobalTab.vue';
 
 export default {
     components: {
-        GlobalPlaylist
+        // GlobalPlaylist,
+        GlobalTabVue
     }
 };
 </script>
 
 <template>
-    <div>
-     <global-playlist />
-    </div>
+<h1>Vue Exercices</h1>
+<p>Let's practice with VueJs!</p>
+    <!-- <div class="playlist__bg">
+        <global-playlist />
+    </div> -->
+    <global-tab-vue />
 </template>
 
 <style scoped>
- div {
+ .playlist__bg {
     padding: 1rem;
     max-width: 30rem;
     margin: 0 auto; 

@@ -1,4 +1,4 @@
-# music-app
+# Vue Exercices
 
 ## Project setup
 ```
