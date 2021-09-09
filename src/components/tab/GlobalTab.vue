@@ -19,13 +19,14 @@ export default {
       <tab title="Intro">
           <h1>Vue Exercices</h1>
           <p>Let's practice with VueJs!</p>
-          <drag-and-drop />
       </tab>
     <tab title="Exercice 1">Create a reusable tab component.</tab>
     <tab title="Exercice 2">
       <global-playlist />
     </tab>
-    <tab title="Exercice 3">En cours</tab>
+    <tab title="Exercice 3">
+         <drag-and-drop />
+    </tab>
     <tab title="Exercice 4">4</tab>
   </tabs-wrapper>
 </template>

@@ -5,8 +5,8 @@ export default {
     setup () {
         const items = ref([
             { id: 0, title: 'Drag', list:1},
-            { id: 1, title: '&', list:1},
-            { id: 2, title: 'Drop', list:2},
+            { id: 1, title: '&', list:2},
+            { id: 2, title: 'Drop', list:3},
         ])
 
         const getList = (list) => {
@@ -69,25 +69,56 @@ export default {
         {{ item.title }}
     </div>
 </div>
+<div 
+    class="drop-zone"
+    @drop="onDrop($event, 3)"
+    @dragenter.prevent
+    @dragover.prevent
+>
+    <div 
+        v-for="item in getList(3)"
+        :key="item.id"
+        class="drag-el"
+        draggable="true"
+        @dragstart="startDrag($event, item)"
+    >
+        {{ item.title }}
+    </div>
+</div>
 </template>
 
 <style scoped>
 .drop-zone {
-    width: 50%;
-    margin: 5rem auto;
-    background-color: wheat;
+    display: flex;
+    background-color: #3498db;
+    border-radius: 0.6rem;
     padding: 1rem;
     min-height: 1rem;
+    margin: 0.5rem;
+}
+
+.drop-zone:nth-of-type(2n+1) {
+    background-color: rgb(124, 212, 212);
+}
+
+.drop-zone:nth-of-type(2n) {
+    background-color: rgb(37, 188, 226);
 }
 
 .drag-el {
+    border-radius: 1rem;
     background-color: #3498db;
     color: white;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
+    padding: 1rem;
+    max-width: max-content;
+    margin: 0.1rem;
 }
 
 .drag-el:nth-last-of-type(1) {
     margin-bottom: 0;
+}
+
+.drag-el:nth-of-type(2n) {
+    background-color: rgb(37, 188, 226);
 }
 </style>
