@@ -1,4 +1,5 @@
 <script>
+import DragAndDrop from '../drag-and-drop/DragAndDrop.vue';
 import GlobalPlaylist from "../playlist/GlobalPlaylist.vue";
 import Tab from "./Tab.vue";
 import TabsWrapper from "./TabsWrapper.vue";
@@ -8,6 +9,7 @@ export default {
     Tab,
     TabsWrapper,
     GlobalPlaylist,
+    DragAndDrop
   },
 };
 </script>
@@ -17,6 +19,7 @@ export default {
       <tab title="Intro">
           <h1>Vue Exercices</h1>
           <p>Let's practice with VueJs!</p>
+          <drag-and-drop />
       </tab>
     <tab title="Exercice 1">Create a reusable tab component.</tab>
     <tab title="Exercice 2">
