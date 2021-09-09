@@ -35,6 +35,7 @@ import { ref, provide } from 'vue';
 <style scoped>
 .tabs {
     max-width: 40rem;
+    margin: 0 auto;
 }
 
 .tabs__header {

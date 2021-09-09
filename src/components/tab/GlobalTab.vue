@@ -1,24 +1,28 @@
 <script>
-import Tab from './Tab.vue';
-import TabsWrapper from './TabsWrapper.vue';
+import GlobalPlaylist from "../playlist/GlobalPlaylist.vue";
+import Tab from "./Tab.vue";
+import TabsWrapper from "./TabsWrapper.vue";
 
 export default {
-    components: {
-        Tab,
-        TabsWrapper
-    }
+  components: {
+    Tab,
+    TabsWrapper,
+    GlobalPlaylist,
+  },
 };
 </script>
 
 <template>
-    <tabs-wrapper>
-        <tab title="Tab 1">Hello from Tab 1</tab>
-        <tab title="Tab 2">Hello from Tab 2</tab>
-        <tab title="Tab 3">Hello from Tab 3</tab>
-        <tab title="Tab 4">Hello from Tab 4</tab>
-    </tabs-wrapper>
+  <tabs-wrapper>
+      <tab title="Intro">
+          <h1>Vue Exercices</h1>
+          <p>Let's practice with VueJs!</p>
+      </tab>
+    <tab title="Exercice 1">Create a reusable tab component.</tab>
+    <tab title="Exercice 2">
+      <global-playlist />
+    </tab>
+    <tab title="Exercice 3">En cours</tab>
+    <tab title="Exercice 4">4</tab>
+  </tabs-wrapper>
 </template>
-
-<style>
-
-</style>
