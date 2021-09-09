@@ -22,6 +22,7 @@ import { ref, provide } from 'vue';
             <li 
                 v-for="title in tabTitleList"   
                 :key="title"
+                :class="{ selected: title == selectedTitle }"
                 @click="selectedTitle = title"
             >
                  {{ title }}
@@ -31,3 +32,30 @@ import { ref, provide } from 'vue';
     </div>
 </template>
     
+<style scoped>
+.tabs {
+    max-width: 40rem;
+}
+
+.tabs__header {
+    margin-bottom: 1rem;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.tabs__header li {
+    width: 8rem;
+    text-align: center;
+    padding: 1rem 2rem;
+    margin-right: 1rem;
+    background-color: #ddd;
+    border-radius: 5px;
+    transition: 0.4s all ease-out;
+}
+
+.tabs__header li.selected {
+    background-color: #0984e3;
+    color: white;
+}
+</style>
