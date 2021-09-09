@@ -14,7 +14,7 @@
 </script>
 
 <template>
-    <div>
+    <div class="tab-content" v-show="title == selectedTitle">
         <slot />
     </div>
 </template>

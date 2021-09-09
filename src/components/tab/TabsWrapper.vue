@@ -7,7 +7,7 @@ import { ref, provide } from 'vue';
             const selectedTitle = ref(tabTitleList.value[0]);
 
 
-            provide("selectedTitle", selectedTitle)
+            provide("selectedTitle", selectedTitle);
             return {
                 selectedTitle,
                 tabTitleList
