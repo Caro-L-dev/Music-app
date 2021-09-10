@@ -1,7 +1,8 @@
 <script>
-import DragAndDrop from '../drag-and-drop/DragAndDrop.vue';
+import DragAndDrop from "../drag-and-drop/DragAndDrop.vue";
+import TheHeader from "../header/TheHeader.vue";
 import GlobalPlaylist from "../playlist/GlobalPlaylist.vue";
-import GlobalQuote from '../quote-generator/GlobalQuote.vue';
+import GlobalQuote from "../quote-generator/GlobalQuote.vue";
 import Tab from "./Tab.vue";
 import TabsWrapper from "./TabsWrapper.vue";
 
@@ -11,33 +12,28 @@ export default {
     TabsWrapper,
     GlobalPlaylist,
     DragAndDrop,
-    GlobalQuote
+    GlobalQuote,
+    TheHeader,
   },
 };
 </script>
 
 <template>
   <tabs-wrapper>
-      <tab title="Intro">
-          <h1>Vue Exercices</h1>
-          <p>Let's practice with VueJs!</p>
-      </tab>
-    <tab title="Exercice 1">Create a reusable tab component.</tab>
-    <tab title="Exercice 2">
+    <tab title="Intro">
+      <the-header />
+    </tab>
+    <tab title="Exercice 1">
       <global-playlist />
     </tab>
+    <tab title="Exercice 2">
+      <drag-and-drop />
+    </tab>
     <tab title="Exercice 3">
-         <drag-and-drop />
+      <global-quote />
     </tab>
     <tab title="Exercice 4">
-      <global-quote />
+      .
     </tab>
   </tabs-wrapper>
 </template>
-
-
-<style scoped>
-* {
-  box-sizing: border-box;
-}
-</style>
