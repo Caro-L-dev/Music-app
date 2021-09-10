@@ -8,11 +8,15 @@ export default {
 <template>
     <section class="quote-single">
         <div class="quote-content">
-            Content
+            {{ quote.content }}
         </div>
         <div class="quote-info">
-            <div class="quote-title">Title</div>
-            <div class="quote-author">Me</div>
+            <div class="quote-title">
+                {{ quote.title }}
+            </div>
+            <div class="quote-author">
+                {{ quote.author }}
+            </div>
 
         </div>
     </section>
