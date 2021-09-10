@@ -11,7 +11,7 @@ export default {
     </div>
 </template>
 
-<style lang="scss">
+<style>
     :root {
         --primary: #D81E5D;
     }
