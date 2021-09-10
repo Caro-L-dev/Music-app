@@ -24,8 +24,8 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-### Important
-Don't forget to install this with Vue 3.
+### Install dependencies
+With VueJs 3
 ```
 npm i vue-loader-v16
 ```
@@ -36,4 +36,7 @@ npm i -g @vue/cli
 ```
 ```
 vue -V
+```
+```
+node -V
 ```
