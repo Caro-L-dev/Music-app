@@ -3,6 +3,7 @@ import DragAndDrop from "../drag-and-drop/DragAndDrop.vue";
 import TheHeader from "../header/TheHeader.vue";
 import GlobalPlaylist from "../playlist/GlobalPlaylist.vue";
 import GlobalQuote from "../quote-generator/GlobalQuote.vue";
+import GlobalWeather from '../weather-app/GlobalWeather.vue';
 import Tab from "./Tab.vue";
 import TabsWrapper from "./TabsWrapper.vue";
 
@@ -14,6 +15,7 @@ export default {
     DragAndDrop,
     GlobalQuote,
     TheHeader,
+    GlobalWeather,
   },
 };
 </script>
@@ -33,7 +35,7 @@ export default {
       <global-quote />
     </tab>
     <tab title="Exercice 4">
-      .
+      <global-weather />
     </tab>
   </tabs-wrapper>
 </template>
