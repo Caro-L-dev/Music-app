@@ -5,10 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "sass": "node-sass -w scss/ -o css/ --recursive"
   },
   "dependencies": {
     "core-js": "^3.17.2",
+    "node-sass": "^6.0.1",
     "npm-upgrade": "^3.0.0",
     "vue": "^3.2.9",
     "vue-loader-v16": "^16.0.0-beta.5.4"

@@ -1,9 +1,3 @@
-<template>
-  <div class="search-box">
-    <input type="text" class="search-bar" placeholder="Search..." />
-  </div>
-</template>
-
 <style scoped>
 .search-box,
 .search-bar {

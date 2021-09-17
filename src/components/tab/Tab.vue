@@ -2,7 +2,8 @@
 import { inject } from "vue";
 
 export default {
-  props: ["title"],
+  name: 'Tab',
+  props: ["title", "color"],
   setup() {
     const selectedTitle = inject("selectedTitle");
 

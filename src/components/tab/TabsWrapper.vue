@@ -50,7 +50,7 @@ export default {
 .tabs__header li {
   width: 8rem;
   text-align: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 0.5rem;
   margin-right: 1rem;
   background-color: #ddd;
   border-radius: 5px;
